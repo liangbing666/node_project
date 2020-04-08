@@ -1,0 +1,61 @@
+<div class="quanbu">
+	
+
+<%include ./header%>
+
+<!-- 路径导航 -->
+<div class="container">
+	<ol class="breadcrumb">
+		<li>
+			<a href="#">热门作品</a>
+		</li>
+		<% itemlist.forEach(function(val){ %>
+		<li>
+			<a href="#">
+				<%=val.name%>
+			</a>
+		</li>
+
+		<li class="active">XX</li>
+	</ol>
+</div>
+<!-- 路径导航 END -->
+<div class="neirong">
+	<div class="article_sty col-md-12">
+		<table class="table table-hover articleList">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<% val.articleList.forEach(function(val1){ %>
+			<tr class="article_content">
+				<td class="con_first1">
+					<!--<img src="/<%=val.imgurl%>" alt="">-->
+				</td>
+				<div class="diyihang">
+					<td class="con_second1">
+						<%=val1.title%>
+					</td>
+					<td class="con_third1">
+						<%=val1.author%>
+					</td>
+				</div>
+				<td class="con_fourth1">
+					<%=val1.keywords%>
+				</td>
+				<td class="con_fifth2">
+					<%-val1.content%>
+				</td>
+			</tr>
+			<% })%>
+		</table>
+	</div>
+</div>
+
+<%})%>
+
+
+</div>

@@ -1,0 +1,55 @@
+.userForm>.input-group{
+	margin-top: 10px;
+}
+.mt{
+	margin-top: 10px;
+}
+.article_sty tr td{
+	text-align: center;
+}
+.article_content .con_first img{
+	border-radius: 50%;
+	height: 50px;
+}
+.edui-default{
+	width: 100%;
+}
+.reset{
+	border: none;
+	width: 80px;
+	height: 50px;
+	border-radius: 30%;
+	box-shadow: 2px 2px #32C2CD;
+	margin-top: 20px;
+}
+.submit{
+	border: none;
+	width: 80px;
+	height: 50px;
+	border-radius: 30%;
+	box-shadow: 2px 2px #32C2CD;
+	margin-top: 20px;
+}
+.editArticleImg{
+	height: 120px;
+	margin-bottom: 20px;
+}
+.index_h1{
+	text-align: center;
+}
+.admin_index_img{
+	text-align: center;
+	margin-top: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

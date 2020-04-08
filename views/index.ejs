@@ -1,0 +1,95 @@
+<%include ./header%>
+
+<div id="xuanfu">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<ul>
+				<li>
+					<a class="xuan1" href="#">起点中文网</a>
+				</li>
+				<li>
+					<a class="xuan2" href="#">玄幻</a>
+				</li>
+				<li>
+					<a class="xuan3" href="#">游戏</a>
+				</li>
+				<li>
+					<a class="xuan4" href="#">女生网</a>
+				</li>
+				<li>
+					<a class="xuan5" href="#">仙侠</a>
+				</li>
+				<li>
+					<a class="xuan2" href="#">都市</a>
+				</li>
+				<li>
+					<a class="xuan3" href="#">科幻</a>
+				</li>
+				<li>
+					<a href="#">More</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+<!--顶部-->
+<div class="ding text-center"><span>Join an upcoming <strong>LIVE</strong> demo of Podia 📢</span></div>
+<!--顶部 END-->
+
+<!--导航和banner字-->
+<div class="container">
+
+	<!--banner字-->
+	<div class="row">
+		<div class="col-md-7">
+			<ul class="list-group">
+				<li class="list-group-item"><span class="banner_zi">Sell <span class="banner_zi_1">online courses</span>, <span class="banner_zi_2">memberships</span>, and <span class="banner_zi_3">digital downloads</span> to your audience. </span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="col-md-5 col-sm-6 col-xs-12">
+			<div class="jumbotron banner_bg">
+				<p>
+					<a class="btn btn-primary btn-lg" href="#" role="button">Start your free 30-day trial</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--banner字 END-->
+</div>
+<!--导航和banner字 END-->
+
+<!--banner图-->
+<div class="container">
+	<div class="row ">
+		<div class="col-md-12 banner_tu1">
+			<img class="you" src="img/book.png" />
+			<div class="row">
+				<%itemlist.forEach(function(val){ %>
+				<div class="col-md-4">
+					<div class="art">
+						<div class="art_title">
+							<a href="/list/<%=val._id%>" target="_blank"><%=val.name%></a>
+						</div>
+						<div class="art_con">
+							<h5>NO.1</h5>
+							<ol>
+								<% val.articleList.forEach(function(val1){ %>
+								<li>
+									<%=val1.title%>
+								</li>
+								<% })%>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<%})%>
+			</div>
+		</div>
+	</div>
+</div>
+<!--banner图 END-->
+
+<%include ./footer%>

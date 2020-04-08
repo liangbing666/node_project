@@ -1,0 +1,89 @@
+<%include ./header%>
+
+<!-- 路径导航 -->
+<div class="container">
+
+	<!-- 路径导航 END -->
+	<div class="col-md-3 list_bang">
+		<td class="con_second">
+			<p class="con_second_h2">
+				<%itemlist.forEach(function(val4){ %>
+				<%=val4.name%>榜单
+
+			</p>
+		</td>
+		<h4>热门作品排行</h4>
+		<ul>
+			<li style="color: red;">原创风云榜</li>
+			<li>24小时热销榜</li>
+			<li>新锐会员周点击榜</li>
+			<li>会员点击榜</li>
+			<li>推荐票榜</li>
+			<li>收藏榜</li>
+			<li>VIP更新榜</li>
+			<li>VIP收藏榜</li>
+			<li>VIP精品打赏榜</li>
+			<li>完本榜</li>
+		</ul>
+		<h4>新书排行</h4>
+		<ul>
+			<li class="bang_first">热门作品排行</li>
+			<li>签约作家新书榜</li>
+			<li>公众作者新书榜</li>
+			<li>新人签约新书榜</li>
+			<li>新人作者新书榜</li>
+		</ul>
+		<h4>社区排行</h4>
+		<ul>
+			<li class="bang_first">打赏粉丝榜</li>
+		</ul>
+		<h4>其他排行</h4>
+		<ul>
+			<li class="bang_first">女生精选榜</li>
+			<li>女生原创风云榜</li>
+		</ul>
+	</div>
+
+	<div class="article_sty col-md-9">
+		<table class="table table-hover articleList">
+			<p class="fengyun">原创风云榜</p>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+
+			<% articlelist.forEach(function(val){ %>
+			<tr class="article_content">
+
+				<td class="con_first">
+					<img src="/<%=val.imgurl%>" alt="">
+				</td>
+				<div class="diyihang">
+					<td class="con_second">
+						<%=val.title%>
+					</td>
+					<td class="con_third">
+						——
+						<%=val.author%>
+					</td>
+				</div>
+				<td class="con_fourth">
+					<%=val.keywords%>
+				</td>
+				<td class="con_fifth">
+					<%-val.content%>
+				</td>
+				<td>
+					<a href="/content/<%=val4._id%>" target="_blank"><input class="list_btn1" type="button" value="书籍详情" /></a><input class="list_btn2" type="button" value="加入书架" />
+				</td>
+			</tr>
+			<% })%>
+		</table>
+		<%})%>
+	</div>
+</div>
+
+<%include ./footer%>

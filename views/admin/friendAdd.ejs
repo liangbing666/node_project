@@ -1,0 +1,48 @@
+<% include ./header %>
+<link rel="stylesheet" href="/css/style.css" />
+
+<!-- 路径导航 -->
+<ol class="breadcrumb">
+    <li>
+        <a href="#">链接管理</a>
+    </li>
+    <li class="active">添加链接</li>
+</ol>
+<!-- 路径导航 END -->
+
+
+<!-- 表单 -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+            <form action="/admin/friendInsert" class="userForm" method="post">
+                <div class="input-group">
+                    <span class="input-group-addon">分类名称</span>
+                    <input type="text" class="form-control" name="name">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">分类介绍</span>
+                    <input type="text" class="form-control" name="description">
+                </div>
+                
+                <div class="input-group">
+                    <span class="input-group-addon">分类排序</span>
+                    <input type="text" class="form-control" name="order" value="0">
+                </div>
+
+                <div class="input-group">
+                    <input type="submit" class="submit">
+                </div>
+            </form>
+
+
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+<!-- 表单 end -->
+
+
+<% include ./footer %>

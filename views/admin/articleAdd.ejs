@@ -1,0 +1,77 @@
+<% include ./header %>
+
+<!-- 引入 富文本编辑器 -->
+<script src="/ueditor/ueditor.config.js"></script>
+<script src="/ueditor/ueditor.all.min.js"></script>
+
+<!-- 路径导航 -->
+<ol class="breadcrumb">
+    <li>
+        <a href="#">文章管理</a>
+    </li>
+    <li class="active">发布文章</li>
+</ol>
+<!-- 路径导航 END -->
+
+
+<!-- 发布文章 -->
+<div class="container articleAdd">
+   <div class="row">
+       <form action="/admin/articleInsert" method="post" enctype="multipart/form-data">
+       <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">文章栏目</span>
+                <select name="itemId" class="form-control">
+                    <!-- 循环 -->
+                    <% itemlist.forEach(function(val){ %>
+                        <option value="<%=val._id%>"><%=val.name%></option>
+                    <% }) %>
+                </select>
+            </div>
+       </div>
+       <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">文章标题</span>
+                <input type="text" class="form-control" name="title">
+            </div>
+       </div>
+       <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">作　　者</span>
+                <input type="text" class="form-control" name="author">
+            </div>
+       </div>
+       <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">文章封面</span>
+                <input type="file" class="form-control" name="imgurl">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">关键字　</span>
+                <input type="text" class="form-control" name="keywords">
+            </div>
+       </div>
+       <div class="col-md-12">
+            <div class="input-group">
+                <span class="input-group-addon">文章描述</span>
+                <textarea name="content" id="content"></textarea>
+            </div>
+       </div>      
+       <div class="col-md-6">
+            <input class="reset" type="reset">
+       </div>
+       <div class="col-md-6">
+            <input class="submit" type="submit">
+       </div>
+    </form>
+    </div>
+</div>
+
+<script>
+    // 实例化编辑器
+    var ue = UE.getEditor('content');
+</script>
+
+<% include ./footer %>

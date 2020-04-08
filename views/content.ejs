@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/index.css" />
+<div class="quanbu">
+
+	<!-- 路径导航 -->
+	<div class="container">
+		<ol class="top_daohang">
+			<li class="first_a">
+				<a href="#">起点中文网　</a>
+			</li>
+			<li class="active">玄幻　</li>
+			<li class="first_b">
+				<a href="#">
+					<%=data.title%>
+				</a>
+			</li>
+
+			
+		</ol>
+	</div>
+	<!-- 路径导航 END -->
+	<div class="neirong">
+		<div class="article_sty col-md-12">
+			<table class="table table-hover articleList">
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr class="article_content">
+					<td class="con_first1">
+
+					</td>
+					<div class="diyihang">
+						<td class="con_second1">
+							<%=data.title%>
+						</td>
+						<td class="con_third1">
+							<%=data.author%>
+						</td>
+					</div>
+					<td class="con_fourth1">
+						<%=data.keywords%>
+					</td>
+					<td class="con_fifth2">
+						<%-data.content%>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
